@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,kJAAI,CACZ,OAAO,CAAC,8DAAI",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/01-Config/_Imports.scss",
+        "../scss/01-Config/_Variables.scss",
+        "../scss/01-Config/_Responsive-Mixins.scss",
+        "../scss/02-Base/_Reset.scss",
+        "../scss/02-Base/_Typography.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}
