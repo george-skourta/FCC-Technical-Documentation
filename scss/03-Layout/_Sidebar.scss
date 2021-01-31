@@ -1,0 +1,108 @@
+/* Sidebar */
+.sidebar {
+    border-right: 1px solid rgba($color: $dark-blue, $alpha: .12);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include md_view() {
+        display: none;
+    }
+
+    /* Sidebar: Header */
+    &__header {
+        padding: 30px;
+        padding-bottom: 15px;
+    }
+
+    /* Sidebar: Header: Title */
+    &__header-title {
+        color: $orange;
+        font-family: $side-font;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 0 rgba($color: $orange, $alpha: .25);
+        line-height: 30px;
+        display: block;
+
+        @include xl_view() {
+            font-size: 25px;
+            line-height: 25px;    
+        }
+
+        @include lg_view() {
+            font-size: 25px;
+            line-height: 25px;    
+        }
+    }
+
+    /* Sidebar: Header: Subtitle */
+    &__header-subtitle {
+        color: $dark-blue;
+        font-family: $side-font;
+        font-size: 50px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 0 rgba($color: $dark-blue, $alpha: .25);
+        line-height: 50px;
+        display: block;
+        
+        @include xl_view() {
+            font-size: 30px;
+            line-height: 30px;
+            text-shadow: 2px 2px 0 rgba($color: $dark-blue, $alpha: .25);
+        }
+
+        @include lg_view() {
+            font-size: 30px;
+            line-height: 30px;
+            text-shadow: 2px 2px 0 rgba($color: $dark-blue, $alpha: .25);
+        }
+    }
+
+    /* Sidebar: Navigation */
+    &__nav {
+        margin: 20px 0;
+    }
+
+    /* Sidebar: Navigation: Link */
+    &__nav-link {
+        color: $dark-blue;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        padding: 10px 30px;
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+
+        &--active {
+            background-color: rgba($color: $dark-blue, $alpha: .03);
+            
+            &::after {
+                content: ' ';
+                background-color: $orange;
+                width: 3px;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -2px;
+            }
+        }
+
+        &:hover, &:focus {
+            background-color: rgba($color: $dark-blue, $alpha: .03);
+            
+            &::after {
+                content: ' ';
+                background-color: $orange;
+                width: 3px;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -2px;
+            }
+        }
+    }
+}

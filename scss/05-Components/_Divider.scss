@@ -1,0 +1,26 @@
+.divider {
+    position: relative;
+    //width: 100%;
+    margin: 0 30px;
+
+    i {
+        background-color: white;
+        color: $dark-blue;
+        font-size: 11px;
+        position: absolute;
+        top: -5px;
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            right: 0;
+        }
+    }
+
+    &__line {
+        border-top: 1px solid rgba($color: $dark-blue, $alpha: .12);
+        height: 0;
+    }
+}

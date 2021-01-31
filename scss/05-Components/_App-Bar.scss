@@ -1,0 +1,24 @@
+.app-bar {
+    border-top: 1px solid rgba($color: $dark-blue, $alpha: .12);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+
+    /* App Bar: Button */
+    &__button {
+        text-align: center;
+        position: relative;
+
+        .button {
+            border: 1px solid rgba($color: $dark-blue, $alpha: .12);
+            display: inline-block;
+            padding: 10px;
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

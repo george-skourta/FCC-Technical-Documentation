@@ -8,12 +8,14 @@
 @import '02-Base/_Typography.scss';
 
 /* 03 Layout */
-
+@import '03-Layout/_Sidebar.scss';
+@import '03-Layout/_Main.scss';
 
 /* 04 Objects */
 
 
 /* 05 Components */
-
+@import '05-Components/_Divider.scss';
+@import '05-Components/_App-Bar.scss';
 
 /* 06 Pages */
