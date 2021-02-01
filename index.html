@@ -16,7 +16,7 @@
         <div class="row no-gutters">
             <div class="col-xl-2 col-lg-3 col-md-12 col-sm-12 col-12">
                 <!-- Sidebar -->
-                <div class="sidebar">
+                <div id="sidebarMenu" class="sidebar">
                     <!-- Sidebar: Header -->
                     <div class="sidebar__header">
                         <span class="sidebar__header-title">
@@ -63,11 +63,13 @@
     <!-- App Bar -->
     <div class="app-bar">
         <div class="app-bar__button">
-            <div class="button">
+            <div class="button" onclick="toggleMenu();">
                 <i class="material-icons">menu</i>
             </div>
         </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="/scripts/main.js"></script>
 </body>
 </html>

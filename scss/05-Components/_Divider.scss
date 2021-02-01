@@ -1,7 +1,14 @@
 .divider {
     position: relative;
-    //width: 100%;
     margin: 0 30px;
+
+    @include sm_view() {
+        margin: 0 15px;
+    }
+    
+    @include xs_view() {
+        margin: 0 15px;
+    }
 
     i {
         background-color: white;
