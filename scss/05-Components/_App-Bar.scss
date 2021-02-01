@@ -5,20 +5,39 @@
     right: 0;
     left: 0;
     height: 50px;
+    display: none;
+
+    @include md_view() {
+        display: block;
+    }
+
+    @include sm_view() {
+        display: block;
+    }
+
+    @include xs_view() {
+        display: block;
+    }
 
     /* App Bar: Button */
     &__button {
         text-align: center;
-        position: relative;
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
 
         .button {
-            border: 1px solid rgba($color: $dark-blue, $alpha: .12);
+            background-color: $orange;
+            box-shadow: 0 0 10px rgba($color: $orange, $alpha: .25);
             display: inline-block;
             padding: 10px;
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
+            transform: rotate(46deg);
+
+            i {
+                color: white;
+                transform: rotate(-45deg);
+            }
         }
     }
 }

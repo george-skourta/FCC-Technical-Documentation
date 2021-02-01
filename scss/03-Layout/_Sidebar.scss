@@ -9,6 +9,14 @@
         display: none;
     }
 
+    @include sm_view() {
+        display: none;
+    }
+
+    @include xs_view() {
+        display: none;
+    }
+
     /* Sidebar: Header */
     &__header {
         padding: 30px;
