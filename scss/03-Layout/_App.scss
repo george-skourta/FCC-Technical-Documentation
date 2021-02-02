@@ -1,0 +1,17 @@
+.app-shell {
+    position: relative;
+
+    &__sidebar {
+        background-color: white;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 350px;
+    }
+
+    &__main {
+        margin-left: 350px;
+        padding: 30px;
+    }
+}

@@ -1,0 +1,40 @@
+.title-box {
+    margin-bottom: 30px;
+
+    /* Title Box: Title */
+    &__title {
+        color: $orange;
+        font-family: $side-font;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 0 rgba($color: $orange, $alpha: .25);
+        line-height: 30px;
+        display: block;
+
+        @include xl_view() {
+            font-size: 25px;
+            line-height: 25px;    
+        }
+
+        @include lg_view() {
+            font-size: 25px;
+            line-height: 25px;    
+        }
+    }
+
+    /* Title Box: Subtitle */
+    &__subtitle {
+        color: $dark-blue;
+        font-family: $side-font;
+        font-size: 50px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 0 rgba($color: $dark-blue, $alpha: .25);
+        line-height: 50px;
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    .divider {
+        margin: 0;
+    }
+}

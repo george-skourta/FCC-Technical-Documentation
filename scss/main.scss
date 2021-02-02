@@ -1,21 +1,182 @@
-/* 01 Config */
-@import '01-Config/_Imports.scss';
-@import '01-Config/_Variables.scss';
-@import '01-Config/_Responsive-Mixins.scss';
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* 02 Base */
-@import '02-Base/_Reset.scss';
-@import '02-Base/_Typography.scss';
+/* Variables */
+$orange: #F25700;
+$dark-blue: #283E53;
 
-/* 03 Layout */
-@import '03-Layout/_Sidebar.scss';
-@import '03-Layout/_Main.scss';
+$main-font: 'Inconsolata', monospace;
+$side-font: 'Teko', sans-serif;
 
-/* 04 Objects */
+/* Responsive Mixins */
+@mixin xl_view() {
+    @media only screen and (min-width: 1200px) and (max-width: 1919px) {
+        @content;
+    }
+}
+@mixin lg_view() {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin md_view() {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin sm_view() {
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin xs_view() {
+    @media only screen and (max-width: 575px) {
+        @content;
+    }
+}
 
+/* Reset */
+html, body {
+    font-family: $main-font;
+    padding: 0;
+    margin: 0;
+}
 
-/* 05 Components */
-@import '05-Components/_Divider.scss';
-@import '05-Components/_App-Bar.scss';
+* {
+    box-sizing: border-box;
+}
 
-/* 06 Pages */
+/* Typography */
+h2 {
+    color: $dark-blue;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 30px;
+}
+
+p {
+    color: $dark-blue;
+}
+
+a {
+    color: $orange;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    margin: 30px 0;
+    padding: 0;
+
+    li {
+        color: $dark-blue;
+        font-family: $main-font;
+        font-size: 16px;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        position: relative;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: ' ';
+            background-color: $orange;
+            width: 8px;
+            height: 8px;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+/* Header */
+header {
+    color: $dark-blue;
+    font-family: $side-font;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 rgba($color: $dark-blue, $alpha: .25);
+    line-height: 40px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Divider */
+.divider {
+    position: relative;
+    margin: 15px 0;
+    margin-bottom: 30px;
+
+    i {
+        background-color: white;
+        color: $dark-blue;
+        font-size: 11px;
+        position: absolute;
+        top: -5px;
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            right: 0;
+        }
+    }
+
+    &__line {
+        border-top: 1px solid rgba($color: $dark-blue, $alpha: .12);
+        height: 0;
+    }
+}
+
+/* Code */
+code {
+    background-color: rgba($color: $dark-blue, $alpha: .12);
+    display: inline-block;
+}
+
+.code-snippet-block {
+    background: rgba($color: $dark-blue, $alpha: .05);
+    border-left: 8px solid $orange;
+    padding: 30px;
+    display: block;
+    margin: 30px 0;
+}
+
+/* Main */
+main {
+    padding: 30px;
+    margin-left: 350px;
+}
+
+/* Sidebar */
+.sidebar {
+    border-right: 1px solid rgba($color: $dark-blue, $alpha: .12);
+    width: 350px;
+    height: 100vh;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    a {
+        color: $dark-blue;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 20px;
+        text-decoration: none;
+    }
+}
